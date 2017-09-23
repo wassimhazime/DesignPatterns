@@ -14,9 +14,9 @@ namespace DesignPatterns;
  */
 class Singleton {
   
-    private $name;
+    private  $name;
     private static $get;
-    private function __construct($name) {
+    private function __construct(string $name) {
         $this->name = $name;
     }
 

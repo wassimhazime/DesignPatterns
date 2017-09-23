@@ -14,7 +14,7 @@ namespace DesignPatterns\Factory;
 class A {
     private $name;
     private $age;
-    function __construct($name, $age) {
+    function __construct(string $name, string $age) {
         $this->name = $name;
         $this->age = $age;
         

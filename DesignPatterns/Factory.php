@@ -16,11 +16,11 @@ use DesignPatterns\Factory\B;
  */
 class Factory {
     
-    public static function getA($name="name",$age=5){
+    public static function getA(string $name="name",int $age=5){
         return new A($name, $age) ;  
     }
     
-    public static function getB($name="name",$age=5,$adress=""){
+    public static function getB(string $name="name",int $age=5,string $adress=""){
        return new B(self::getA($name,$age), $adress)  ;
     }
 }
