@@ -1,0 +1,14 @@
+{
+    "name": "design/patterns",
+    "authors": [
+        {
+            "name": "wassimhazime",
+            "email": "wassim.hazime@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "DesignPatterns\\": "DesignPatterns/"}
+    },
+    "require": {}
+}
