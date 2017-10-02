@@ -22,7 +22,7 @@ class Singleton {
 
    public static function getObject(){
        if (self::$get==null) {
-          self::$get =new  Singleton('wassim');
+          self::$get =new  self('wassim');
           echo 'instance object <br>';
            
        }
