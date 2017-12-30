@@ -14,34 +14,42 @@ namespace DesignPatterns;
  * @author wassime
  */
 class Event {
-    private $lisner=[];
-    
-    
-    private static $event=null;
 
-    public static function getEvent(){
-        
-        if( self::$event==null){
-            self::$event=new self;
+    private $lisner = [];
+    private static $event = null;
+
+    public static function getEvent() {
+
+        if (self::$event == null) {
+            self::$event = new self;
         }
-        
+
         return self::$event;
-        
-        
-        
+    }
+
+    public function on($action, $callable) {
+        if (!$this->hasLisener($action)) {
+            $this->lisner[] = $action;
+        }
+
+        $this->lisner[$action][] = $callable;
+    }
+
+    public function emit($action, ...$arge) {
+
+        if ($this->hasLisener($action)) {
+            foreach ($this->lisner[$action] as $event) {
+                call_user_func_array($event, $arge);
+            }
+        }
     }
     
-    public function on($action,$callable) {
-        if(!isset($this->lisner[$action])){
-           
-           $this->lisner[]=$action;
-        }
-        
-        $this->lisner[$action]=$callable;
+    
+    
+
+    private function hasLisener(string $action): bool {
+
+        return isset($this->lisner[$action]);
     }
-    public function emit($action, ...$arge) {
-        
-        call_user_func_array($this->lisner[$action],$arge);
-        
-    }
+
 }
