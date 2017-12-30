@@ -29,6 +29,7 @@ and open the template in the editor.
         use DesignPatterns\decorator\sql;
         use DesignPatterns\decorator\DecoratorWhere;
         use DesignPatterns\decorator\DecoratorJoin;
+        use DesignPatterns\Event;
         
 echo ' <hr><h1> Injection de dépendances</h1> =>  de passer directement '
         . 'au constructeur l\'objet que l\'on souhaite '
@@ -106,7 +107,28 @@ $container->get('B')->afiche();
  echo '<br> ';
  
  
+ echo 'event';
+ $event = Event::getEvent();
+ 
+ 
+ $event->on("test", function(){
+     echo "test on";
+ } );
+ 
+ $event->emit("test");
+ $event->emit("test");
+ $event->emit("test");
+ 
+   
+ 
+ 
+ 
+ 
      ?>
+        
+        
+        
+        
         
     
     </body>
