@@ -10,5 +10,9 @@
         "psr-4": {
           "DesignPatterns\\": "DesignPatterns/"}
     },
-    "require": {}
+    "require": {
+        "php": "^7.0",
+
+        "filp/whoops": "^2.1"
+    }
 }

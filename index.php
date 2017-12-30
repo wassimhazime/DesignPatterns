@@ -12,6 +12,10 @@ and open the template in the editor.
     <body>
         <?php
         require_once './vendor/autoload.php';
+        
+        use \Whoops\Run;
+        use \Whoops\Handler\PrettyPageHandler;
+        
         use DesignPatterns\Singleton;
         use DesignPatterns\Fluent;
        
@@ -30,6 +34,14 @@ and open the template in the editor.
         use DesignPatterns\decorator\DecoratorWhere;
         use DesignPatterns\decorator\DecoratorJoin;
         use DesignPatterns\Event;
+        
+        
+        /// Handler error
+        (new Run)
+        ->pushHandler(new PrettyPageHandler)
+        ->register();
+
+
         
 echo ' <hr><h1> Injection de dépendances</h1> =>  de passer directement '
         . 'au constructeur l\'objet que l\'on souhaite '
@@ -111,13 +123,20 @@ $container->get('B')->afiche();
  $event = Event::getEvent();
  
  
- $event->on("test", function(){
-     echo "test on";
+ $event->on("test", function($arg){
+     echo "test on $arg";
  } );
  
- $event->emit("test");
- $event->emit("test");
- $event->emit("test");
+ $event->on("wassim", function($arg1,$arg2){
+     echo "test wassim  $arg1 , $arg2 <br>";
+ } );
+ 
+ 
+ $event->emit("test",666);
+ 
+ $event->emit("test","hhh");
+ 
+ $event->emit("wassim",444,"tets arg");
  
    
  

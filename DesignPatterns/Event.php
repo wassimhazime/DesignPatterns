@@ -39,8 +39,9 @@ class Event {
         
         $this->lisner[$action]=$callable;
     }
-    public function emit($action) {
-        call_user_func($this->lisner[$action]);
+    public function emit($action, ...$arge) {
+        
+        call_user_func_array($this->lisner[$action],$arge);
         
     }
 }
