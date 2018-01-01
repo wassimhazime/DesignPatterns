@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPatterns\InterfaceEvent;
+namespace DesignPatterns\Comportement\EventPsr;
 
 /**
  * Interface for EventManager

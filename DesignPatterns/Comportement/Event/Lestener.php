@@ -2,7 +2,7 @@
 
 
 
-namespace DesignPatterns\Event;
+namespace DesignPatterns\Comportement\Event;
 
 /**
  * Description of Lestener

@@ -6,18 +6,20 @@
  * and open the template in the editor.
  */
 
-namespace DesignPatterns\Observer;
+namespace DesignPatterns\Comportement\EventSpl;
 
 /**
  * Description of Observer1
  *
  * @author wassime
  */
-class Observer2 implements \SplObserver {
+class Observer1 implements \SplObserver {
     //put your code here
      public function update(\SplSubject $obj)
   {
-    echo 'Observer2 a été notifié ! Nouvelle valeur de l\'attribut <strong>nom</strong> : ', $obj->getNom()."<br>";
+    echo 'Observer1 a été notifié ! Nouvelle valeur de l\'attribut <strong>nom</strong> : '.
+            $obj->getNom() .
+            "<br>";
   }
 
 }

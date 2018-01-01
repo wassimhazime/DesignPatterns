@@ -1,5 +1,16 @@
 <?php
-namespace DesignPatterns\Factory;
+namespace DesignPatterns\Creation\Factory;
+/*
+ * test class dépendances class A
+
+
+ */
+
+/**
+ * Description of B
+ *
+ * @author Wassim Hazime
+ */
 
 class B {
     private $A;

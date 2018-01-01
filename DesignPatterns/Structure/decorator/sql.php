@@ -7,10 +7,18 @@
  */
 
 /**
+ * Description of main
  *
  * @author Wassim Hazime
  */
-namespace DesignPatterns\decorator;
-interface InterfaceApp {
-    public function select($table);
+namespace DesignPatterns\Structure\decorator;
+class sql implements InterfaceApp{
+
+
+    
+
+    public function select($table) {
+        return "select * from $table";
+    }
+
 }

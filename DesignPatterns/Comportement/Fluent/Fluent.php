@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace DesignPatterns;
+namespace DesignPatterns\Comportement\Fluent;
 
 /**
  * Description of Fluent
@@ -50,8 +50,6 @@ class Fluent {
       
     }
     public function __toString() {
-        return 'SELECT '. implode(', ', $this->select)
-            . ' FROM ' . implode(', ', $this->from)
-            . ' WHERE ' . implode(' AND ', $this->conditions);
+        return $this->query();
     }
 }

@@ -11,10 +11,10 @@
  *
  * @author wassime
  */
-namespace DesignPatterns\EventPsr;
+namespace DesignPatterns\Comportement\EventPsr;
 
 
-class Event implements \DesignPatterns\InterfaceEvent\EventInterface{
+class Event implements EventInterface{
 
     private $name = "";
     private $params = [];

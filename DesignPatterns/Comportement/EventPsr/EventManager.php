@@ -12,9 +12,9 @@
  * @author wassime
  */
 
-namespace DesignPatterns\EventPsr;
+namespace DesignPatterns\Comportement\EventPsr;
 
-class EventManager implements \DesignPatterns\InterfaceEvent\EventManagerInterface {
+class EventManager implements EventManagerInterface {
 
     private $lesteners = [];
 

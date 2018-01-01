@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace DesignPatterns\Event;
+namespace DesignPatterns\Comportement\Event;
 
 /**
  * Description of event

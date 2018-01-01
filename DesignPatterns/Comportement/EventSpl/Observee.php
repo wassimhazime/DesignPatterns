@@ -12,7 +12,7 @@
  * @author wassime
  */
 
-namespace DesignPatterns\Observer;
+namespace DesignPatterns\Comportement\EventSpl;
 
 
 class Observee implements \SplSubject {

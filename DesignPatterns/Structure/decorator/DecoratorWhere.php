@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace DesignPatterns\decorator;
+namespace DesignPatterns\Structure\decorator;
 
 /**
  * Description of DecoratorWhere

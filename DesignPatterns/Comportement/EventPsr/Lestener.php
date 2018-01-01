@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPatterns\EventPsr;
+namespace DesignPatterns\Comportement\EventPsr;
 
 /**
  * Description of Lestener

@@ -1,14 +1,12 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Le principe est d'avoir une classe qui va 
+ * se charger de créer les objets dont on a besoin.
  */
 
-namespace DesignPatterns;
-use DesignPatterns\Factory\A;
-use DesignPatterns\Factory\B;
+namespace DesignPatterns\Creation\Factory;
+
 /**
  * Description of Factory
  *

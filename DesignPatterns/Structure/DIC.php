@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace DesignPatterns;
+namespace DesignPatterns\Structure;
 
 /**
  * Description of conteneur d'injecteur de dépendance
@@ -18,6 +18,10 @@ class DIC {
     private $registry = [];
     private $instances = [];
 
+    
+    
+    
+    
     public function set($key, Callable $resolver) {
         $this->registry[$key] = $resolver;
     }

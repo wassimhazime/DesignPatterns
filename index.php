@@ -13,29 +13,29 @@ and open the template in the editor.
       <?php
       require_once './vendor/autoload.php';
 
-      use DesignPatterns\Singleton;
+      use DesignPatterns\Creation\Singleton\Singleton;
       /////////////////////////////////////
-      use DesignPatterns\Fluent;
+      use DesignPatterns\Comportement\Fluent\Fluent;
       //////////////////////////////////////
-      use DesignPatterns\Facade;
+      use DesignPatterns\Structure\Facade\Facade;
       //////////////////////////////////////
-      use DesignPatterns\DIC;  //conteneur d'injecteur de dépendance
+      use DesignPatterns\Structure\DIC;  //conteneur d'injecteur de dépendance
       //////////////////////////////////////
-      use DesignPatterns\Factory;
-      use DesignPatterns\Factory\A;
-      use DesignPatterns\Factory\B;
+      use DesignPatterns\Creation\Factory\Factory;
+      use DesignPatterns\Creation\Factory\A;
+      use DesignPatterns\Creation\Factory\B;
       /////////////////////////////////
-      use DesignPatterns\decorator\sql;
-      use DesignPatterns\decorator\DecoratorWhere;
-      use DesignPatterns\decorator\DecoratorJoin;
+      use DesignPatterns\Structure\decorator\sql;
+      use DesignPatterns\Structure\decorator\DecoratorWhere;
+      use DesignPatterns\Structure\decorator\DecoratorJoin;
       ///////////////////////////////////
-      use DesignPatterns\Event\Emitter;
+      use DesignPatterns\Comportement\Event\Emitter;
       ///////////////////////////////////
-      use DesignPatterns\EventPsr\EventManager;
+      use DesignPatterns\Comportement\EventPsr\EventManager;
       ////////////////////////////////////////
-      use DesignPatterns\Observer\Observee;
-      use DesignPatterns\Observer\Observer1;
-      use DesignPatterns\Observer\Observer2;
+      use DesignPatterns\Comportement\EventSpl\Observee;
+      use DesignPatterns\Comportement\EventSpl\Observer1;
+      use DesignPatterns\Comportement\EventSpl\Observer2;
 
 ////////////////////////////////////////
 /// Handler error
@@ -48,6 +48,25 @@ and open the template in the editor.
       echo ' <hr><h1> Injection de dépendances</h1> =>  de passer directement '
       . 'au constructeur l\'objet que l\'on souhaite '
       . 'utiliser    __construct($A, $adress) liaison des class en construct <br>';
+
+
+// J'explique à mon conteneur comment résoudre B
+      $container = new DIC();
+// J'explique à mon container comment obtenir une instance de A
+      $container->set('A', function($container) {
+          return new A("wasim", 30);
+      });
+
+// J'explique à mon container comment obtenir une instance de B
+      $container->set('B', function($c) {
+          // Je peux utiliser le container pour résoudre A
+          return new B($c->get('A'), "ttt");
+      });
+
+// Maintenant si je veux une instance de B
+
+      $container->get('B')->afiche();
+
 
 
       echo ' <hr><h1>Singleton</h1> * 1000 permet d\'avoir une '
@@ -86,29 +105,21 @@ and open the template in the editor.
       echo ' <hr><h1>Facade</h1>  Comme son nom l\'indique le principe des Facade est de créer une classe qui 
          servira de façade à une autre classe en rendant la classe appellable via des appels statiques. <br>  ';
 
+
+      Facade::setObjects(new Fluent());
+
+
+
       echo Facade::select("A", "b")->from(" table1")->where(" id=3")->query() . "<br>";
+      echo Facade::aficheA();
+      echo Facade::aficheB();
 
 
 
 
 
 
-// J'explique à mon conteneur comment résoudre B
-      $container = new DIC();
-// J'explique à mon container comment obtenir une instance de A
-      $container->set('A', function($container) {
-          return new A("wasim", 30);
-      });
 
-// J'explique à mon container comment obtenir une instance de B
-      $container->set('B', function($c) {
-          // Je peux utiliser le container pour résoudre A
-          return new B($c->get('A'), "ttt");
-      });
-
-// Maintenant si je veux une instance de B
-
-      $container->get('B')->afiche();
 
 
 
@@ -179,7 +190,7 @@ and open the template in the editor.
       $event->emit("modifier", 5, "tets arg");
 
 
-      echo "<hr> <hr><h1>le pattern Observer en php</h1>  : vous avez un objet 
+      echo "<hr> <hr><h1>le pattern EventSpl en php</h1>  : vous avez un objet 
         observé et un ou plusieurs autre(s) objet(s) qui l'observe(nt).
         Lorsque telle action survient,
         vous allez prévenir tous les objets qui l'observent. <br><br><br><br>";

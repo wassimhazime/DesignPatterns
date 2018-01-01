@@ -1,5 +1,5 @@
 <?php
-namespace DesignPatterns;
+namespace DesignPatterns\Creation\Singleton;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

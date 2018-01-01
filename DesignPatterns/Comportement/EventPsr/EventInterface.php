@@ -1,7 +1,6 @@
 <?php
 
-namespace DesignPatterns\InterfaceEvent;
-
+namespace DesignPatterns\Comportement\EventPsr;
 /**
  * Representation of an event
  */
