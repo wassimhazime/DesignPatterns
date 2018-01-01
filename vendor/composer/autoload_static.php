@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
 {
+    public static $files = array (
+        '337663d83d8353cc8c7847676b3b0937' => __DIR__ . '/..' . '/kahlan/kahlan/src/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
@@ -14,6 +18,10 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+        ),
+        'K' => 
+        array (
+            'Kahlan\\' => 7,
         ),
         'D' => 
         array (
@@ -29,6 +37,10 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Kahlan\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kahlan/kahlan/src',
         ),
         'DesignPatterns\\' => 
         array (

@@ -10,9 +10,14 @@
         "psr-4": {
           "DesignPatterns\\": "DesignPatterns/"}
     },
+    "scripts":{"test":"kahlan --reporter=verbose"}
+    ,
     "require": {
         "php": "^7.0",
 
         "filp/whoops": "^2.1"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^4.0"
     }
 }
