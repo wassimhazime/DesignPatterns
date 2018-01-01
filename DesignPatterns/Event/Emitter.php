@@ -27,14 +27,16 @@ class Emitter {
         return self::$event;
     }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function on(string $action, callable $callable, int $priority = 0, int $NB_call = -1, bool $final = false) {
         if (!$this->hasLisener($action)) {
             $this->lesteners[] = $action;
         }
-        $this->lesteners[$action][] = new Lestener($priority, $callable, $NB_call,$final);
+        $this->lesteners[$action][] = new Lestener($priority, $callable, $NB_call, $final);
         $this->sortLestener($action);
     }
 
+/////link once
     public function once(string $action, callable $callable, int $priority = 0, bool $final = false) {
         $this->on($action, $callable, $priority, 1, $final);
     }
@@ -47,20 +49,21 @@ class Emitter {
         $this->on($action, $callable, $priority, $NB_call, TRUE);
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function emit(string $action, ...$arge) {
 
         if ($this->hasLisener($action)) {
             foreach ($this->lesteners[$action] as $lestener) {
 
                 $nb_call = $lestener->call_function($arge);
-                if($lestener->getFinal() ==TRUE){
+                if ($lestener->getFinal() == TRUE) {
                     break;
                 }
-                
             }
         }
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private function sortLestener(string $action) {
 
 
