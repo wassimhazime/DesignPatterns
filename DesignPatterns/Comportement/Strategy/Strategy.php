@@ -28,7 +28,7 @@ class Strategy {
     }
 
     public function affiche() {
-        echo  $this->format->textFormat($this->txt) ." <br>";
+        return  $this->format->textFormat($this->txt) ." <br>";
         
     }
 

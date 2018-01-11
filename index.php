@@ -264,13 +264,13 @@ use function Http\Response\send;
        $stratigy = new Strategy("wassim");
        
        $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h1);
-       $stratigy->affiche();
+       echo  $stratigy->affiche();
       
       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h2);
-      $stratigy->affiche();
+        echo  $stratigy->affiche();
        
        $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_strong);
-       $stratigy->affiche();
+        echo   $stratigy->affiche();
       
       echo "<hr> <hr><h1>http psr7</h1> 
            <br><br><br><br>";
