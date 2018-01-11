@@ -14,7 +14,7 @@ namespace DesignPatterns\Structure\Facade;
 class A {
    
     function aficheA(){
-        echo 'par facade object A <br>';
+        return 'par facade object A <br>';
     }
 
 }

@@ -8,7 +8,7 @@
 
 namespace DesignPatterns\Structure\Facade;
 
-use DesignPatterns\Comportement\Fluent\Fluent;
+
 
 /**
  * Description of Facade
