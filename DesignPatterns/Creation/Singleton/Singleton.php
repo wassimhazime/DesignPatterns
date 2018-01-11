@@ -20,10 +20,10 @@ class Singleton {
         $this->name = $name;
     }
 
-   public static function getObject(){
+   public static function getObject():self{
        if (self::$get==null) {
           self::$get =new  self('wassim');
-          echo 'instance object <br>';
+          
            
        }
        return self::$get;
@@ -31,5 +31,14 @@ class Singleton {
        
        
    }
+   function getName() {
+       return $this->name;
+   }
+
+   function setName($name) {
+       $this->name = $name;
+   }
+
+
     
 }

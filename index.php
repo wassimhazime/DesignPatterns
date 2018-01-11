@@ -12,32 +12,43 @@ and open the template in the editor.
   <body>
       <?php
       require_once './vendor/autoload.php';
+      ////http psr 7
+      use GuzzleHttp\Psr7\ServerRequest;
+use GuzzleHttp\Psr7\Response;
+use function Http\Response\send;
 
+///Creation
       use DesignPatterns\Creation\Singleton\Singleton;
       /////////////////////////////////////
-      use DesignPatterns\Comportement\Fluent\Fluent;
-      //////////////////////////////////////
-      use DesignPatterns\Structure\Facade\Facade;
-      //////////////////////////////////////
-      use DesignPatterns\Structure\DIC;  //conteneur d'injecteur de dépendance
-      //////////////////////////////////////
       use DesignPatterns\Creation\Factory\Factory;
       use DesignPatterns\Creation\Factory\A;
       use DesignPatterns\Creation\Factory\B;
-      /////////////////////////////////
-      use DesignPatterns\Structure\decorator\sql;
-      use DesignPatterns\Structure\decorator\DecoratorWhere;
-      use DesignPatterns\Structure\decorator\DecoratorJoin;
-      ///////////////////////////////////
+      ////////////////////////////////////
+///Comportement
+      //////////////////// simple (javascript) ///////////////
       use DesignPatterns\Comportement\Event\Emitter;
-      ///////////////////////////////////
+      ///////////////////  PSR                ////////////////
       use DesignPatterns\Comportement\EventPsr\EventManager;
-      ////////////////////////////////////////
+      ////////////////////   spl             /////////////////
       use DesignPatterns\Comportement\EventSpl\Observee;
       use DesignPatterns\Comportement\EventSpl\Observer1;
       use DesignPatterns\Comportement\EventSpl\Observer2;
+      ///////////////////////////////////////////////////
+      use DesignPatterns\Comportement\Fluent\Fluent;
+      //////////////////////////////////////
+      use DesignPatterns\Comportement\Strategy\Strategy;
+     
+////Structure
+      ///////////////////////////////////////////
+      use DesignPatterns\Structure\Facade\Facade;
+      ///////////////////////////////////////////
+      use DesignPatterns\Structure\DIC;  //conteneur d'injecteur de dépendance
+      //////////////////////////////////////////
+      use DesignPatterns\Structure\decorator\sql;
+      use DesignPatterns\Structure\decorator\DecoratorWhere;
+      use DesignPatterns\Structure\decorator\DecoratorJoin;
 
-////////////////////////////////////////
+////++++++++++++++++++++++++++++++++++++++++++++++++++//
 /// Handler error
       (new \Whoops\Run)
               ->pushHandler(new \Whoops\Handler\PrettyPageHandler)
@@ -91,14 +102,18 @@ and open the template in the editor.
 
 
 
-      echo ' <hr><h1>Factory</h1> Le principe est d\'avoir'
+      echo ' <hr><h1>Factory (usine)</h1> Le principe est d\'avoir'
       . ' une classe qui va se charger de créer les objets dont on a besoin.  ';
+      
       echo ' <h2>Factory</h2>   Factory::getA()*2 <br>';
       Factory::getA()->afiche();
       Factory::getA()->afiche();
       echo ' <h2> Factory</h2>   Factory::getB()*2 <br>';
       Factory::getB()->afiche();
       Factory::getB()->afiche();
+      echo ' <h2> Factory</h2>   Factory::get("A") Factory::get("B")  <br>';
+      Factory::get("A")->afiche();
+      Factory::get("B")->afiche();
 
 
 
@@ -231,6 +246,45 @@ and open the template in the editor.
       //$ev->trigger("psr","h", ["1T","1R"]);
       $ev->detach("psr", $call2);
       $ev->trigger("psr", "h", ["2T", "2R"]);
+      
+      
+      
+      
+      
+       echo "<hr> <hr><h1>Séparer ses algorithmes : le pattern Strategy</h1> 
+           ous avez une classe dédiée à une tâche spécifique.
+           Dans un premier temps, celle-ci effectue une opération 
+           suivant un algorithme bien précis. Cependant, avec le temps, 
+           cette classe sera amenée à évoluer, et elle suivra plusieurs algorithmes,
+           tout en effectuant la même tâche de base <br><br><br><br>";
+      
+      
+     
+       
+       $stratigy = new Strategy("wassim");
+       
+       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h1);
+       $stratigy->affiche();
+      
+      $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h2);
+      $stratigy->affiche();
+       
+       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_strong);
+       $stratigy->affiche();
+      
+      echo "<hr> <hr><h1>http psr7</h1> 
+           <br><br><br><br>";
+       
+       
+$req= ServerRequest::getUriFromGlobals();
+$res=new Response();
+
+$path=$req->getPath();
+$res->getBody()->write("path de url est ".$path);
+
+send($res);
+       
+       
       ?>
 
 

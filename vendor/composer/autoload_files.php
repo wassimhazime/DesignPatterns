@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '337663d83d8353cc8c7847676b3b0937' => $vendorDir . '/kahlan/kahlan/src/functions.php',
+    'a0edc8309cc5e1d60e3047b5df6b7052' => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
+    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    '6f2c5977e422114bbaec553e7c77ee8b' => $vendorDir . '/http-interop/response-sender/src/functions.php',
 );
