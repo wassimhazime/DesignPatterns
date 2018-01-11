@@ -1,9 +1,12 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Le pattern observateur définit une relation
+entre les objets de type un à plusieurs, de
+façon que, lorsqu’un objet change d’état,
+tous ce qui en dépendent en soient informés
+et soient mis à jour automatiquement
+
  */
 
 /**

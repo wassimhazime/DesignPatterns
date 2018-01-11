@@ -12,11 +12,11 @@ and open the template in the editor.
   <body>
       <?php
       require_once './vendor/autoload.php';
+
       ////http psr 7
       use GuzzleHttp\Psr7\ServerRequest;
-use GuzzleHttp\Psr7\Response;
-use function Http\Response\send;
-
+      use GuzzleHttp\Psr7\Response;
+      use function Http\Response\send;
 ///Creation
       use DesignPatterns\Creation\Singleton\Singleton;
       /////////////////////////////////////
@@ -37,7 +37,6 @@ use function Http\Response\send;
       use DesignPatterns\Comportement\Fluent\Fluent;
       //////////////////////////////////////
       use DesignPatterns\Comportement\Strategy\Strategy;
-     
 ////Structure
       ///////////////////////////////////////////
       use DesignPatterns\Structure\Facade\Facade;
@@ -104,7 +103,7 @@ use function Http\Response\send;
 
       echo ' <hr><h1>Factory (usine)</h1> Le principe est d\'avoir'
       . ' une classe qui va se charger de créer les objets dont on a besoin.  ';
-      
+
       echo ' <h2>Factory</h2>   Factory::getA()*2 <br>';
       Factory::getA()->afiche();
       Factory::getA()->afiche();
@@ -158,7 +157,16 @@ use function Http\Response\send;
       echo '<br> ';
 
 
-      echo '<hr> <hr><h1>observeurs  event </h1>  Lorsque certaines action-clefs sont'
+      echo '<hr> <hr><h1>observeurs  event </h1>'
+      . 'Le pattern observateur définit une relation
+         entre les objets de type un à plusieurs, de
+           façon que, lorsqu’un objet change d’état,
+             tous ce qui en dépendent en soient informés
+         et soient mis à jour automatiquement
+         '
+      . '<br>'
+      . ''
+      . '  Lorsque certaines action-clefs sont'
       . ' effectuées sur notre application nous allons émettre un évènement.'
       . ' On pourra ensuite observer le déclenchement de ces évènements et effectuer'
       . ' un traitement particulier.<br><br><br><br><br><br>  ';
@@ -246,45 +254,44 @@ use function Http\Response\send;
       //$ev->trigger("psr","h", ["1T","1R"]);
       $ev->detach("psr", $call2);
       $ev->trigger("psr", "h", ["2T", "2R"]);
-      
-      
-      
-      
-      
-       echo "<hr> <hr><h1>Séparer ses algorithmes : le pattern Strategy</h1> 
+
+
+
+
+
+      echo "<hr> <hr><h1>Séparer ses algorithmes : le pattern Strategy</h1> 
            ous avez une classe dédiée à une tâche spécifique.
            Dans un premier temps, celle-ci effectue une opération 
            suivant un algorithme bien précis. Cependant, avec le temps, 
            cette classe sera amenée à évoluer, et elle suivra plusieurs algorithmes,
            tout en effectuant la même tâche de base <br><br><br><br>";
-      
-      
-     
-       
-       $stratigy = new Strategy("wassim");
-       
-       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h1);
-       echo  $stratigy->affiche();
-      
+
+
+
+
+      $stratigy = new Strategy("wassim");
+
+      $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h1);
+      echo $stratigy->affiche();
+
       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_h2);
-        echo  $stratigy->affiche();
-       
-       $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_strong);
-        echo   $stratigy->affiche();
-      
+      echo $stratigy->affiche();
+
+      $stratigy->setFormat(new \DesignPatterns\Comportement\Strategy\Format_strong);
+      echo $stratigy->affiche();
+
       echo "<hr> <hr><h1>http psr7</h1> 
            <br><br><br><br>";
-       
-       
-$req= ServerRequest::getUriFromGlobals();
-$res=new Response();
 
-$path=$req->getPath();
-$res->getBody()->write("path de url est ".$path);
 
-send($res);
-       
-       
+//      $req = ServerRequest::getUriFromGlobals();
+//      $res = new Response();
+//
+//      $path = $req->getPath();
+//      $res->getBody()->write("path de url est " . $path);
+//
+//      send($res);
+      
       ?>
 
 
