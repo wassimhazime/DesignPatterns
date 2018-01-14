@@ -7,6 +7,9 @@
  * cette classe sera amenée à évoluer
  * , et elle suivra plusieurs algorithmes, tout en effectuant 
  * la même tâche de base.
+ * 
+ *  Les méthodes Template utilisent l’héritage pour faire varier des parties d’un algorithme
+     Les stratégies utilisent la délégation pour faire varier tout l’algorithme.
  */
 
 /**
@@ -19,8 +22,8 @@ namespace DesignPatterns\Comportement\Strategy;
 class Strategy {
     private $format;
     private $txt;
-            function setFormat($format) {
-        $this->format = $format;
+            function setFormat(IStyle $format) {
+             $this->format = $format;
     }
 
     function __construct($txt) {
@@ -28,6 +31,7 @@ class Strategy {
     }
 
     public function affiche() {
+        
         return  $this->format->textFormat($this->txt) ." <br>";
         
     }
