@@ -3,6 +3,12 @@
 
 
 <phpunit bootstrap="vendor/autoload.php"
+
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         
          colors="true">
     <testsuites>
         <testsuite name="money">

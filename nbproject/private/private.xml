@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/Tests/Comportement/StrategyTest.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/index.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/Tests/Structure/decoratorTest.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Event/Lestener.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Strategy/IStyle.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Strategy/Format_h2.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Event/Emitter.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Structure/DIC.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Strategy/Strategy.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/EventPsr/EventInterface.php</file>
-            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/EventPsr/Event.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
