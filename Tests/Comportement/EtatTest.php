@@ -1,9 +1,11 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Le pattern Etat permet de déléguer le comportement
+d'un objet dans un autre objet. Cela permet de changer
+le comportement de l'objet en cours d'exécution et de
+simuler un changement de classe.
+.
  */
 
 /**
