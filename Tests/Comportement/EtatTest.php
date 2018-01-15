@@ -17,7 +17,7 @@ class EtatTest extends \PHPUnit\Framework\TestCase{
     public function testEtatNormal() {
          $text=new \DesignPatterns\Comportement\Stat_Etat\Ouvrer(" e1 =>");
         $txt=$text->modifie(" e2 =>")->sauvegarde(" e3 =>")->ferme(" e4 =>")->fin();
-        echo $txt;
+       
         $this->assertEquals(' e1 =>|ouvre e2 =>|modifier  e3 =>|sauvgarde e4 =>|ferme ',$txt);
     }
     

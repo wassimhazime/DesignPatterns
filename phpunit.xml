@@ -4,10 +4,7 @@
 
 <phpunit bootstrap="vendor/autoload.php"
 
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         forceCoversAnnotation="false"
+         
          
          colors="true">
     <testsuites>
@@ -15,4 +12,9 @@
             <directory>./Tests</directory>
         </testsuite>
     </testsuites>
+    <filter>
+    <whitelist proceessUncoveredFromWhitelist="true">
+        <directory suffic=".php">DesignPatterns</directory>
+    </whitelist>
+    </filter>
 </phpunit>
