@@ -31,6 +31,7 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
         ),
         'G' => 
@@ -75,6 +76,10 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Psr\\Cache\\' => 
         array (
