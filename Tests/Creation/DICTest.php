@@ -117,4 +117,29 @@ class DICTest extends PHPUnit\Framework\TestCase {
         $b=$dic->get(B::class);
           $this->assertEquals("ok", $b->afficheparB("ok"));
      }
+     
+      /**
+     * @expectedException     \Exception
+     */
+       public function testAutoDepanInterface() {
+        $dic = DIC::buildContainer();
+        
+        $dic->get( \DesignPatterns\Structure\Adapter\TVA::class) ;
+                
+       }
+       
+       public function testAutoDepanInterfacecallable() {
+        $dic = DIC::buildContainer();
+        
+        $dic->set( \DesignPatterns\Structure\Adapter\TVA::class, function ($dic)
+                {
+                      $adap=$dic->get(\DesignPatterns\Structure\Adapter\Adapter_heritage::class);
+            
+            return new \DesignPatterns\Structure\Adapter\TVA($adap);
+        }) ;
+        
+          $tva=$dic->get( \DesignPatterns\Structure\Adapter\TVA::class)   ;  
+          
+          $this->assertEquals(true, $tva instanceof \DesignPatterns\Structure\Adapter\TVA);
+       }
 }

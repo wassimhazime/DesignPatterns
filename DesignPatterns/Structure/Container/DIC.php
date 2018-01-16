@@ -90,8 +90,8 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
             }
         } else {
 
-            throw new \Exception("not is class");
-        }
+            throw new \Exception($id .  class_exists($id). " is Not class ");
+           }
     }
 
     private function setCallable($id, callable $callable) {
