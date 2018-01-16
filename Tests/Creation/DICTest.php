@@ -57,7 +57,7 @@ class DICTest extends PHPUnit\Framework\TestCase {
     public function testbuildContainerIsSinglton() {
         $dic = DIC::buildContainer();
         $dic2 = DIC::buildContainer();
-        $this->assertEquals(true, $dic == $dic2); //test
+        $this->assertEquals(true, $dic === $dic2); //test
     }
 
     public function testSimpleGetSetDIS() {

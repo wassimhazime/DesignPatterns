@@ -31,7 +31,7 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
         if (self::$DIC == null) {
             self::$DIC = new self();
         }
-        self::$DIC = new self(); /// test
+      
         return self::$DIC;
     }
 
