@@ -74,7 +74,7 @@ class DICTest extends PHPUnit\Framework\TestCase {
         $dic = DIC::buildContainer();
 
 
-        $dic->set(A::class);
+    
 
         $a_dic = $dic->get(A::class);
 
@@ -98,13 +98,20 @@ class DICTest extends PHPUnit\Framework\TestCase {
 
     public function testSetCallable() {
         $dic = DIC::buildContainer();
+        $next=false;
 
-        $dic->set("b", function ($dic) {
+        $dic->set("b", function ($dic) use(&$next){
+            $next=true;
             $a=$dic->get(A::class);
             return new B($a);
         });
 
+        
+        $this->assertEquals(false, $next);
         $this->assertEquals(true, $dic->get("b") instanceof B);
+        $this->assertEquals(true, $next);
+        
+        
     }
 
       public function testAutoDepan() {
@@ -142,4 +149,37 @@ class DICTest extends PHPUnit\Framework\TestCase {
           
           $this->assertEquals(true, $tva instanceof \DesignPatterns\Structure\Adapter\TVA);
        }
+       
+        public function testgetNew() {
+        $dic = DIC::buildContainer();
+        
+        $dic->set( \DesignPatterns\Structure\Adapter\TVA::class, function ($dic)
+                {
+                      $adap=$dic->get(\DesignPatterns\Structure\Adapter\Adapter_heritage::class);
+            
+            return new \DesignPatterns\Structure\Adapter\TVA($adap);
+        }) ;
+        
+          $tva=$dic->getNew( \DesignPatterns\Structure\Adapter\TVA::class)   ; 
+         $this->assertEquals(true, $tva instanceof \DesignPatterns\Structure\Adapter\TVA);
+          
+           $tva1=$dic->getNew( \DesignPatterns\Structure\Adapter\TVA::class)   ;  
+           $tva2=$dic->getNew( \DesignPatterns\Structure\Adapter\TVA::class)   ; 
+          $this->assertEquals(FALSE, $tva1===$tva2);
+          
+           $tva1=$dic->get( \DesignPatterns\Structure\Adapter\TVA::class)   ;  
+           $tva2=$dic->get( \DesignPatterns\Structure\Adapter\TVA::class)   ; 
+          $this->assertEquals(true, $tva1===$tva2);
+          
+          $b1=$dic->get(B::class);
+          $b2=$dic->get(B::class);
+           $this->assertEquals(true, $b1===$b2);
+           
+           $b1=$dic->getNew(B::class);
+           $b2=$dic->getNew(B::class);
+           $this->assertEquals(false, $b1===$b2);
+          
+       }
+       
+       
 }

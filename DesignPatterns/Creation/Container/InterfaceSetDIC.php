@@ -19,7 +19,7 @@ namespace DesignPatterns\Creation\Container;
  */
 interface InterfaceSetDIC {
     
-    public function set($id,$object=null) ;
+    public function set($id,$object) ;
     /*
      * déterminer les dépendances et essayer des les résoudre automatiquemen
      */

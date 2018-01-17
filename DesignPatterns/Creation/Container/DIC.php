@@ -18,10 +18,11 @@ namespace DesignPatterns\Creation\Container;
 
 use Psr\Container\ContainerInterface;
 
-class DIC implements ContainerInterface, InterfaceSetDIC {
+class DIC implements ContainerInterface, InterfaceSetDIC , InterfaceGetNew{
 
     private static $DIC = null;
     private $object = [];
+    private $callable = [];
     private $automatisation=true;
 
     private function __construct($automatisation) {
@@ -41,8 +42,11 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
     public function get( $id) {
 
         if (!$this->has($id)) {
-            
-            $this->setAutomatisation($id);
+           $this->object[$id] = $this->Automatisation($id);
+        }
+        if(is_callable($this->object[$id])){
+            $this->callable[$id]=$this->object[$id];
+          $this->object[$id] = ($this->object[$id])(self::$DIC);  
         }
         return $this->object[$id];
     }
@@ -50,20 +54,20 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
     public function has( $id): bool {
         return isset($this->object[$id]);
     }
-
-    public function set( $id, $object = null) {
-        
-        if (is_callable($object)) {
-            
-            $this->setCallable($id, $object);
-        } else {
-            $this->setSingleton($id, $object);
+    public function getNew($id) {
+        if(isset($this->callable[$id])){
+            return  (($this->callable[$id])(self::$DIC));
         }
+        return $this->Automatisation($id);
+    }
+    
+    public function set( $id,$object) {
+       $this->object[$id] = $object;
     }
 
     ///////////////////////////////////////////////////////////////////////////// 
 
-    private function setAutomatisation($id) {
+    private function Automatisation($id) {
         if (!$this->automatisation) {
            throw new \Exception($id .  " is Not object to Container DIC"); 
         }
@@ -71,7 +75,7 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
             $reflected_class = new \ReflectionClass($id); // On récupère la class depuis la chaine de caractère
 
             if ($reflected_class->isInstantiable()) { // On a bien une class instanciable (et pas une interface)
-                $this->object[$id]= $this->reflectionClass($reflected_class);
+                return $this->reflectionClass($reflected_class);
                
             } else {
                 throw new \Exception($id . " is not an instanciable Class");
@@ -83,14 +87,7 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
            }
     }
 
-    private function setCallable($id, callable $callable) {
-        $this->object[$id] = $callable(self::$DIC);
-    }
 
-    private function setSingleton($id, $object) {
-        $this->object[$id] = $object;
-    }
-    //////////////////////////////////////////////////////////////////////////////////
     private function reflectionClass(\ReflectionClass $reflected_class) {
            $constructor = $reflected_class->getConstructor(); // On récupère le constructeur
 
@@ -115,5 +112,7 @@ class DIC implements ContainerInterface, InterfaceSetDIC {
                 
                 return $object;
     }
+
+
 
 }
