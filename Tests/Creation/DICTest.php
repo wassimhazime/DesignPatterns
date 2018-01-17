@@ -16,7 +16,7 @@
  *
  * @author wassime
  */
-use DesignPatterns\Structure\Container\DIC;
+use DesignPatterns\Creation\Container\DIC;
 
 class A {
 
@@ -50,7 +50,7 @@ class DICTest extends PHPUnit\Framework\TestCase {
     }
 
     public function testbuildContainer() {
-        $dic = DIC::buildContainer();
+        $dic = DIC::buildContainer(true);
         $this->assertEquals(true, $dic instanceof DIC);
     }
 

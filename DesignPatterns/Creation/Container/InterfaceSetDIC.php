@@ -11,7 +11,7 @@ Afin d'avoir un code bien organisé et testable,
  *  cette méthodologie peut parfois rendre les objets difficiles à instancier.
  */
 
-namespace DesignPatterns\Structure\Container;
+namespace DesignPatterns\Creation\Container;
 
 /**
  *
