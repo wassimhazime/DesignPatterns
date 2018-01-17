@@ -114,28 +114,28 @@ class DICTest extends PHPUnit\Framework\TestCase {
         
     }
 
-      public function testAutoDepan() {
+    public function testAutoDepan() {
         $dic = DIC::buildContainer();
          $this->assertEquals(true, $dic->get(B::class) instanceof B);
      }
     
-      public function testAutoDepanFuncion() {
+    public function testAutoDepanFuncion() {
         $dic = DIC::buildContainer();
         $b=$dic->get(B::class);
           $this->assertEquals("ok", $b->afficheparB("ok"));
      }
      
-      /**
+    /**
      * @expectedException     \Exception
      */
-       public function testAutoDepanInterface() {
+    public function testAutoDepanInterface() {
         $dic = DIC::buildContainer();
         
         $dic->get( \DesignPatterns\Structure\Adapter\TVA::class) ;
                 
        }
        
-       public function testAutoDepanInterfacecallable() {
+    public function testAutoDepanInterfacecallable() {
         $dic = DIC::buildContainer();
         
         $dic->set( \DesignPatterns\Structure\Adapter\TVA::class, function ($dic)
@@ -150,7 +150,7 @@ class DICTest extends PHPUnit\Framework\TestCase {
           $this->assertEquals(true, $tva instanceof \DesignPatterns\Structure\Adapter\TVA);
        }
        
-        public function testgetNew() {
+    public function testgetNew() {
         $dic = DIC::buildContainer();
         
         $dic->set( \DesignPatterns\Structure\Adapter\TVA::class, function ($dic)
