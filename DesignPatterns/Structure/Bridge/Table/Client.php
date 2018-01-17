@@ -6,7 +6,7 @@ une couche de haut niveau et celle de bas niveau.
 
  */
 
-namespace DesignPatterns\Structure\Bridge;
+namespace DesignPatterns\Structure\Bridge\Table;
 
 /**
  * Description of Client
@@ -16,7 +16,7 @@ namespace DesignPatterns\Structure\Bridge;
 class Client implements InterfaceTable{
     private $db;
     private $table;
-    public function __construct(InterfaceDB $db) {
+    public function __construct(\DesignPatterns\Structure\Bridge\DB\InterfaceDB $db) {
         $this->db=$db;
         $this->table= " client";
     }

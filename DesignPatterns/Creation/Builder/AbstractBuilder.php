@@ -42,7 +42,7 @@ abstract class AbstractBuilder {
          return $this;
     }
     
-  function builde():ProduitPC {
+    function builde():ProduitPC {
        
          return new ProduitPC( 
                  $this->pc["cpu"], 

@@ -6,7 +6,7 @@ une couche de haut niveau et celle de bas niveau.
 
  */
 
-namespace DesignPatterns\Structure\Bridge;
+namespace DesignPatterns\Structure\Bridge\DB;
 
 /**
  * Description of Oracle

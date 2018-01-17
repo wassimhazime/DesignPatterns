@@ -16,6 +16,7 @@ class Singleton {
   
     private  $name;
     private static $get;
+    private function __clone () {}
     private function __construct(string $name) {
         $this->name = $name;
     }
