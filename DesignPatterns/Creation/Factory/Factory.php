@@ -35,7 +35,7 @@ namespace DesignPatterns\Creation\Factory;
 class Factory {
 
     public static function get(string $class) {
-        $class=strtoupper ($class);
+        $class= ucfirst ($class);
         if ($class == "A") {return self::getA();}
 
         if ($class == "B") { return self::getB();}

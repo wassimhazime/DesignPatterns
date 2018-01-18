@@ -1,9 +1,9 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ L'ajout (et la suppression) des responsabilités à un 
+  <------objet------>
+  dynamiquement au moment de l'exécution.
  */
 
 namespace DesignPatterns\Structure\decorator;

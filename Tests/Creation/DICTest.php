@@ -65,11 +65,44 @@ class DICTest extends PHPUnit\Framework\TestCase {
         $a = new A();
 
         $dic->set(A::class, $a);
+        
         $a_dic = $dic->get(A::class);
 
         $this->assertEquals(true, $a_dic === $a);
     }
+   public function testSimpleGetNew() {
+        $dic = DIC::buildContainer();
+        $a = new A();
 
+        $dic->set(A::class, $a);
+        
+        $a_dicnew = $dic->getNew(A::class);
+        $this->assertEquals(false, $a_dicnew === $a);
+        
+        $a_dic = $dic->get(A::class);
+         $this->assertEquals(true, $a_dic === $a);
+        
+        
+        
+    }
+    
+    
+     public function testSimpleGetNewstring() {
+        $dic = DIC::buildContainer();
+        $a = new A();
+
+        $dic->set("ok", $a);
+        
+        $a_dicnew = $dic->getNew("ok");
+        $this->assertEquals(false, $a_dicnew === $a);
+        
+        $a_dic = $dic->get("ok");
+         $this->assertEquals(true, $a_dic === $a);
+        
+        
+        
+    }
+    
     public function testGetSetDIS() {
         $dic = DIC::buildContainer();
 

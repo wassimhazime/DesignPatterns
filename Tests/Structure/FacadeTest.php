@@ -33,16 +33,8 @@ class FacadeTest extends \PHPUnit\Framework\TestCase {
           $obj->expects($this->once())
                 ->method('foo')
                 ->willReturn("test mock function foo");
-         
-         
-         
-         
-         
-
         Facade::setObjects($obj);
-        
-        
-        $str1 = Facade::awa();
+       $str1 = Facade::awa();
         $this->assertEquals($str1, "test mock function awa");
         
         $str2 = Facade::foo();

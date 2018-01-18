@@ -25,15 +25,18 @@ and open the template in the editor.
       use DesignPatterns\Creation\Factory\B;
       ////////////////////////////////////
 ///Comportement
+//
       //////////////////// simple (javascript) ///////////////
-      use DesignPatterns\Comportement\Event\Emitter;
+      use DesignPatterns\Comportement\Observateur\Event\Emitter;
       ///////////////////  PSR                ////////////////
-      use DesignPatterns\Comportement\EventPsr\EventManager;
+      use DesignPatterns\Comportement\Observateur\EventPsr\EventManager;
       ////////////////////   spl             /////////////////
-      use DesignPatterns\Comportement\EventSpl\Observee;
-      use DesignPatterns\Comportement\EventSpl\Observer1;
-      use DesignPatterns\Comportement\EventSpl\Observer2;
+      use DesignPatterns\Comportement\Observateur\EventSpl\Observee;
+      use DesignPatterns\Comportement\Observateur\EventSpl\Observer1;
+      use DesignPatterns\Comportement\Observateur\EventSpl\Observer2;
       ///////////////////////////////////////////////////
+      
+      
       use DesignPatterns\Comportement\Fluent\Fluent;
       //////////////////////////////////////
       use DesignPatterns\Comportement\Strategy\Strategy;
@@ -41,7 +44,7 @@ and open the template in the editor.
       ///////////////////////////////////////////
       use DesignPatterns\Structure\Facade\Facade;
       ///////////////////////////////////////////
-      use DesignPatterns\Structure\DIC;  //conteneur d'injecteur de dépendance
+    
       //////////////////////////////////////////
       use DesignPatterns\Structure\decorator\sql;
       use DesignPatterns\Structure\decorator\DecoratorWhere;
@@ -55,27 +58,7 @@ and open the template in the editor.
 
 
 
-      echo ' <hr><h1> Injection de dépendances</h1> =>  de passer directement '
-      . 'au constructeur l\'objet que l\'on souhaite '
-      . 'utiliser    __construct($A, $adress) liaison des class en construct <br>';
-
-
-// J'explique à mon conteneur comment résoudre B
-      $container = new DIC();
-// J'explique à mon container comment obtenir une instance de A
-      $container->set('A', function($container) {
-          return new A("wasim", 30);
-      });
-
-// J'explique à mon container comment obtenir une instance de B
-      $container->set('B', function($c) {
-          // Je peux utiliser le container pour résoudre A
-          return new B($c->get('A'), "ttt");
-      });
-
-// Maintenant si je veux une instance de B
-
-      $container->get('B')->afiche();
+    
 
 
 
@@ -253,10 +236,15 @@ and open the template in the editor.
       // $ev->clearListeners("psr");
       //$ev->trigger("psr","h", ["1T","1R"]);
       $ev->detach("psr", $call2);
-      $ev->trigger("psr", "h", ["2T", "2R"]);
+      $ev->trigger("psr", null, ["2T", "2R"]);
 
 
 
+      
+      
+      
+      
+      
 
 
       echo "<hr> <hr><h1>Séparer ses algorithmes : le pattern Strategy</h1> 

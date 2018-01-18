@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="../.js/html5shiv.min.js"></script>
+  <script src="../.js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/home/wassime/projetPHP/DesignPatterns/DesignPatterns</a></li>
+        <li><a href="index.html">Comportement</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Strategy/Format_strong.php.html#16">DesignPatterns\Comportement\Strategy\Format_strong</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Strategy/Format_h2.php.html#16">DesignPatterns\Comportement\Strategy\Format_h2</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ferme.php.html#16">DesignPatterns\Comportement\Stat_Etat\Ferme</a></td><td class="text-right">42%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#17">DesignPatterns\Comportement\Cache\Cache</a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="Stat_Etat/Ouvrer.php.html#16">DesignPatterns\Comportement\Stat_Etat\Ouvrer</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Stat_Etat/Sauvegarde.php.html#16">DesignPatterns\Comportement\Stat_Etat\Sauvegarde</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Command/Actions.php.html#15">DesignPatterns\Comportement\Command\Actions</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Stat_Etat/Modifier.php.html#16">DesignPatterns\Comportement\Stat_Etat\Modifier</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Observateur/EventPsr/Event.php.html#20">DesignPatterns\Comportement\Observateur\EventPsr\Event</a></td><td class="text-right">86%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Cache/Cache.php.html#17">DesignPatterns\Comportement\Cache\Cache</a></td><td class="text-right">22</td></tr>
+       <tr><td><a href="Observateur/EventPsr/Event.php.html#20">DesignPatterns\Comportement\Observateur\EventPsr\Event</a></td><td class="text-right">10</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Cache/Cache.php.html#19"><abbr title="DesignPatterns\Comportement\Cache\Cache::clear">clear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ferme.php.html#40"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ferme::sauvegarde">sauvegarde</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Strategy/Format_h2.php.html#18"><abbr title="DesignPatterns\Comportement\Strategy\Format_h2::textFormat">textFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Sauvegarde.php.html#37"><abbr title="DesignPatterns\Comportement\Stat_Etat\Sauvegarde::sauvegarde">sauvegarde</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Sauvegarde.php.html#33"><abbr title="DesignPatterns\Comportement\Stat_Etat\Sauvegarde::ouvrer">ouvrer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Sauvegarde.php.html#29"><abbr title="DesignPatterns\Comportement\Stat_Etat\Sauvegarde::modifie">modifie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ouvrer.php.html#36"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ouvrer::sauvegarde">sauvegarde</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ouvrer.php.html#32"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ouvrer::ouvrer">ouvrer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ouvrer.php.html#24"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ouvrer::ferme">ferme</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Modifier.php.html#27"><abbr title="DesignPatterns\Comportement\Stat_Etat\Modifier::modifie">modifie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Modifier.php.html#23"><abbr title="DesignPatterns\Comportement\Stat_Etat\Modifier::ferme">ferme</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ferme.php.html#36"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ferme::ouvrer">ouvrer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#23"><abbr title="DesignPatterns\Comportement\Cache\Cache::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ferme.php.html#32"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ferme::modifie">modifie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Stat_Etat/Ferme.php.html#28"><abbr title="DesignPatterns\Comportement\Stat_Etat\Ferme::ferme">ferme</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Observateur/EventPsr/Event.php.html#48"><abbr title="DesignPatterns\Comportement\Observateur\EventPsr\Event::getTarget">getTarget</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/Actions.php.html#31"><abbr title="DesignPatterns\Comportement\Command\Actions::action7">action7</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/Actions.php.html#28"><abbr title="DesignPatterns\Comportement\Command\Actions::action5">action5</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#54"><abbr title="DesignPatterns\Comportement\Cache\Cache::setMultiple">setMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#45"><abbr title="DesignPatterns\Comportement\Cache\Cache::has">has</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#40"><abbr title="DesignPatterns\Comportement\Cache\Cache::getMultiple">getMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cache/Cache.php.html#27"><abbr title="DesignPatterns\Comportement\Cache\Cache::deleteMultiple">deleteMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Strategy/Format_strong.php.html#18"><abbr title="DesignPatterns\Comportement\Strategy\Format_strong::textFormat">textFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Observateur/EventPsr/Event.php.html#36"><abbr title="DesignPatterns\Comportement\Observateur\EventPsr\Event::getParam">getParam</abbr></a></td><td class="text-right">66%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Observateur/EventPsr/Event.php.html#36"><abbr title="DesignPatterns\Comportement\Observateur\EventPsr\Event::getParam">getParam</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.3.0</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.13</a> with <a href="https://xdebug.org/">Xdebug 2.5.5</a> and <a href="https://phpunit.de/">PHPUnit 6.5.5</a> at Thu Jan 18 23:03:34 UTC 2018.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../.js/jquery.min.js" type="text/javascript"></script>
+  <script src="../.js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../.js/holder.min.js" type="text/javascript"></script>
+  <script src="../.js/d3.min.js" type="text/javascript"></script>
+  <script src="../.js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,0,0,0,0,2,2,2,0,1,0,22], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([23,0,0,0,0,0,0,1,0,0,0,78], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,3,"<a href=\"Cache\/AppCache.php.html#12\">DesignPatterns\\Comportement\\Cache\\AppCache<\/a>"],[45.45454545454545,9,"<a href=\"Cache\/Cache.php.html#17\">DesignPatterns\\Comportement\\Cache\\Cache<\/a>"],[100,0,"<a href=\"Cache\/Iterable.php.html#16\">DesignPatterns\\Comportement\\Cache\\Iterable<\/a>"],[66.66666666666666,6,"<a href=\"Command\/Actions.php.html#15\">DesignPatterns\\Comportement\\Command\\Actions<\/a>"],[100,1,"<a href=\"Command\/Command122.php.html#17\">DesignPatterns\\Comportement\\Command\\Command122<\/a>"],[100,1,"<a href=\"Command\/Command2323.php.html#17\">DesignPatterns\\Comportement\\Command\\Command2323<\/a>"],[100,1,"<a href=\"Command\/Command233.php.html#17\">DesignPatterns\\Comportement\\Command\\Command233<\/a>"],[100,1,"<a href=\"Command\/Command342.php.html#17\">DesignPatterns\\Comportement\\Command\\Command342<\/a>"],[100,4,"<a href=\"Command\/Invoqueur.php.html#15\">DesignPatterns\\Comportement\\Command\\Invoqueur<\/a>"],[100,9,"<a href=\"Fluent\/Fluent.php.html#18\">DesignPatterns\\Comportement\\Fluent\\Fluent<\/a>"],[100,12,"<a href=\"Observateur\/Event\/Emitter.php.html#19\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter<\/a>"],[100,4,"<a href=\"Observateur\/Event\/Lestener.php.html#15\">DesignPatterns\\Comportement\\Observateur\\Event\\Lestener<\/a>"],[86.66666666666667,10,"<a href=\"Observateur\/EventPsr\/Event.php.html#20\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event<\/a>"],[100,14,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#20\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager<\/a>"],[100,2,"<a href=\"Observateur\/EventSpl\/ExempleModel.php.html#16\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\ExempleModel<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/Observateur\/Journal.php.html#16\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observateur\\Journal<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/Observateur\/MessageFlash.php.html#18\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observateur\\MessageFlash<\/a>"],[100,5,"<a href=\"Observateur\/EventSpl\/Observee.php.html#25\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observee<\/a>"],[42.857142857142854,6,"<a href=\"Stat_Etat\/Ferme.php.html#16\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme<\/a>"],[66.66666666666666,5,"<a href=\"Stat_Etat\/Modifier.php.html#16\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier<\/a>"],[50,5,"<a href=\"Stat_Etat\/Ouvrer.php.html#16\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer<\/a>"],[50,5,"<a href=\"Stat_Etat\/Sauvegarde.php.html#16\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde<\/a>"],[100,1,"<a href=\"Strategy\/Format_h1.php.html#16\">DesignPatterns\\Comportement\\Strategy\\Format_h1<\/a>"],[0,1,"<a href=\"Strategy\/Format_h2.php.html#16\">DesignPatterns\\Comportement\\Strategy\\Format_h2<\/a>"],[0,1,"<a href=\"Strategy\/Format_strong.php.html#16\">DesignPatterns\\Comportement\\Strategy\\Format_strong<\/a>"],[100,3,"<a href=\"Strategy\/Strategy.php.html#22\">DesignPatterns\\Comportement\\Strategy\\Strategy<\/a>"],[100,3,"<a href=\"TemplateMethod\/AbstractTemplateMethod.php.html#27\">DesignPatterns\\Comportement\\TemplateMethod\\AbstractTemplateMethod<\/a>"],[100,1,"<a href=\"TemplateMethod\/AppTemplateMethod.php.html#16\">DesignPatterns\\Comportement\\TemplateMethod\\AppTemplateMethod<\/a>"],[100,2,"<a href=\"TemplateMethod\/TemplateMethod1.php.html#16\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod1<\/a>"],[100,2,"<a href=\"TemplateMethod\/TemplateMethod2.php.html#16\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod2<\/a>"],[100,2,"<a href=\"TemplateMethod\/TemplateMethod3.php.html#16\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod3<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Cache\/AppCache.php.html#16\">DesignPatterns\\Comportement\\Cache\\AppCache::__construct<\/a>"],[100,2,"<a href=\"Cache\/AppCache.php.html#20\">DesignPatterns\\Comportement\\Cache\\AppCache::cache<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#19\">DesignPatterns\\Comportement\\Cache\\Cache::clear<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#23\">DesignPatterns\\Comportement\\Cache\\Cache::delete<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#27\">DesignPatterns\\Comportement\\Cache\\Cache::deleteMultiple<\/a>"],[100,2,"<a href=\"Cache\/Cache.php.html#31\">DesignPatterns\\Comportement\\Cache\\Cache::get<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#40\">DesignPatterns\\Comportement\\Cache\\Cache::getMultiple<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#45\">DesignPatterns\\Comportement\\Cache\\Cache::has<\/a>"],[100,1,"<a href=\"Cache\/Cache.php.html#49\">DesignPatterns\\Comportement\\Cache\\Cache::set<\/a>"],[0,1,"<a href=\"Cache\/Cache.php.html#54\">DesignPatterns\\Comportement\\Cache\\Cache::setMultiple<\/a>"],[100,1,"<a href=\"Command\/Actions.php.html#16\">DesignPatterns\\Comportement\\Command\\Actions::action1<\/a>"],[100,1,"<a href=\"Command\/Actions.php.html#19\">DesignPatterns\\Comportement\\Command\\Actions::action2<\/a>"],[100,1,"<a href=\"Command\/Actions.php.html#22\">DesignPatterns\\Comportement\\Command\\Actions::action3<\/a>"],[100,1,"<a href=\"Command\/Actions.php.html#25\">DesignPatterns\\Comportement\\Command\\Actions::action4<\/a>"],[0,1,"<a href=\"Command\/Actions.php.html#28\">DesignPatterns\\Comportement\\Command\\Actions::action5<\/a>"],[0,1,"<a href=\"Command\/Actions.php.html#31\">DesignPatterns\\Comportement\\Command\\Actions::action7<\/a>"],[100,1,"<a href=\"Command\/Command122.php.html#19\">DesignPatterns\\Comportement\\Command\\Command122::exec<\/a>"],[100,1,"<a href=\"Command\/Command2323.php.html#19\">DesignPatterns\\Comportement\\Command\\Command2323::exec<\/a>"],[100,1,"<a href=\"Command\/Command233.php.html#19\">DesignPatterns\\Comportement\\Command\\Command233::exec<\/a>"],[100,1,"<a href=\"Command\/Command342.php.html#19\">DesignPatterns\\Comportement\\Command\\Command342::exec<\/a>"],[100,1,"<a href=\"Command\/Invoqueur.php.html#18\">DesignPatterns\\Comportement\\Command\\Invoqueur::__construct<\/a>"],[100,1,"<a href=\"Command\/Invoqueur.php.html#23\">DesignPatterns\\Comportement\\Command\\Invoqueur::setCommands<\/a>"],[100,2,"<a href=\"Command\/Invoqueur.php.html#27\">DesignPatterns\\Comportement\\Command\\Invoqueur::run<\/a>"],[100,1,"<a href=\"Fluent\/Fluent.php.html#22\">DesignPatterns\\Comportement\\Fluent\\Fluent::__construct<\/a>"],[100,1,"<a href=\"Fluent\/Fluent.php.html#25\">DesignPatterns\\Comportement\\Fluent\\Fluent::select<\/a>"],[100,2,"<a href=\"Fluent\/Fluent.php.html#30\">DesignPatterns\\Comportement\\Fluent\\Fluent::from<\/a>"],[100,3,"<a href=\"Fluent\/Fluent.php.html#38\">DesignPatterns\\Comportement\\Fluent\\Fluent::where<\/a>"],[100,1,"<a href=\"Fluent\/Fluent.php.html#45\">DesignPatterns\\Comportement\\Fluent\\Fluent::query<\/a>"],[100,1,"<a href=\"Fluent\/Fluent.php.html#52\">DesignPatterns\\Comportement\\Fluent\\Fluent::__toString<\/a>"],[100,2,"<a href=\"Observateur\/Event\/Emitter.php.html#24\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::getEvent<\/a>"],[100,2,"<a href=\"Observateur\/Event\/Emitter.php.html#34\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::on<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Emitter.php.html#45\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::once<\/a>"],[100,4,"<a href=\"Observateur\/Event\/Emitter.php.html#50\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::emit<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Emitter.php.html#65\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::sortLestener<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Emitter.php.html#66\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::anonymousFunction:66#350<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Emitter.php.html#71\">DesignPatterns\\Comportement\\Observateur\\Event\\Emitter::hasLisener<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Lestener.php.html#22\">DesignPatterns\\Comportement\\Observateur\\Event\\Lestener::__construct<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Lestener.php.html#28\">DesignPatterns\\Comportement\\Observateur\\Event\\Lestener::getPriority<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Lestener.php.html#32\">DesignPatterns\\Comportement\\Observateur\\Event\\Lestener::getFinal<\/a>"],[100,1,"<a href=\"Observateur\/Event\/Lestener.php.html#36\">DesignPatterns\\Comportement\\Observateur\\Event\\Lestener::call_function<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#32\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::getName<\/a>"],[66.66666666666666,2,"<a href=\"Observateur\/EventPsr\/Event.php.html#36\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::getParam<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#44\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::getParams<\/a>"],[0,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#48\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::getTarget<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#52\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::isPropagationStopped<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#57\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::setName<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#62\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::setParams<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#67\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::setTarget<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/Event.php.html#72\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\Event::stopPropagation<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#24\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::attach<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#33\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::detach<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#35\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::anonymousFunction:35#176<\/a>"],[100,2,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#45\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::clearListeners<\/a>"],[100,5,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#51\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::trigger<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#71\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::makeEvent<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#80\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::sortEvents<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#81\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::anonymousFunction:81#536<\/a>"],[100,1,"<a href=\"Observateur\/EventPsr\/EventManager.php.html#87\">DesignPatterns\\Comportement\\Observateur\\EventPsr\\EventManager::hasEvents<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/ExempleModel.php.html#20\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\ExempleModel::getData<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/ExempleModel.php.html#24\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\ExempleModel::setData<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/Observateur\/Journal.php.html#18\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observateur\\Journal::update<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/Observateur\/MessageFlash.php.html#20\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observateur\\MessageFlash::update<\/a>"],[100,1,"<a href=\"Observateur\/EventSpl\/Observee.php.html#45\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observee::attach<\/a>"],[100,2,"<a href=\"Observateur\/EventSpl\/Observee.php.html#49\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observee::detach<\/a>"],[100,2,"<a href=\"Observateur\/EventSpl\/Observee.php.html#55\">DesignPatterns\\Comportement\\Observateur\\EventSpl\\Observee::notify<\/a>"],[100,1,"<a href=\"Stat_Etat\/Ferme.php.html#18\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::__construct<\/a>"],[100,1,"<a href=\"Stat_Etat\/Ferme.php.html#23\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::fin<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ferme.php.html#28\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::ferme<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ferme.php.html#32\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::modifie<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ferme.php.html#36\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::ouvrer<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ferme.php.html#40\">DesignPatterns\\Comportement\\Stat_Etat\\Ferme::sauvegarde<\/a>"],[100,1,"<a href=\"Stat_Etat\/Modifier.php.html#18\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier::__construct<\/a>"],[0,1,"<a href=\"Stat_Etat\/Modifier.php.html#23\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier::ferme<\/a>"],[0,1,"<a href=\"Stat_Etat\/Modifier.php.html#27\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier::modifie<\/a>"],[100,1,"<a href=\"Stat_Etat\/Modifier.php.html#31\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier::ouvrer<\/a>"],[100,1,"<a href=\"Stat_Etat\/Modifier.php.html#35\">DesignPatterns\\Comportement\\Stat_Etat\\Modifier::sauvegarde<\/a>"],[100,1,"<a href=\"Stat_Etat\/Ouvrer.php.html#18\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer::__construct<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ouvrer.php.html#24\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer::ferme<\/a>"],[100,1,"<a href=\"Stat_Etat\/Ouvrer.php.html#28\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer::modifie<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ouvrer.php.html#32\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer::ouvrer<\/a>"],[0,1,"<a href=\"Stat_Etat\/Ouvrer.php.html#36\">DesignPatterns\\Comportement\\Stat_Etat\\Ouvrer::sauvegarde<\/a>"],[100,1,"<a href=\"Stat_Etat\/Sauvegarde.php.html#19\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde::__construct<\/a>"],[100,1,"<a href=\"Stat_Etat\/Sauvegarde.php.html#25\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde::ferme<\/a>"],[0,1,"<a href=\"Stat_Etat\/Sauvegarde.php.html#29\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde::modifie<\/a>"],[0,1,"<a href=\"Stat_Etat\/Sauvegarde.php.html#33\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde::ouvrer<\/a>"],[0,1,"<a href=\"Stat_Etat\/Sauvegarde.php.html#37\">DesignPatterns\\Comportement\\Stat_Etat\\Sauvegarde::sauvegarde<\/a>"],[100,1,"<a href=\"Strategy\/Format_h1.php.html#18\">DesignPatterns\\Comportement\\Strategy\\Format_h1::textFormat<\/a>"],[0,1,"<a href=\"Strategy\/Format_h2.php.html#18\">DesignPatterns\\Comportement\\Strategy\\Format_h2::textFormat<\/a>"],[0,1,"<a href=\"Strategy\/Format_strong.php.html#18\">DesignPatterns\\Comportement\\Strategy\\Format_strong::textFormat<\/a>"],[100,1,"<a href=\"Strategy\/Strategy.php.html#25\">DesignPatterns\\Comportement\\Strategy\\Strategy::setFormat<\/a>"],[100,1,"<a href=\"Strategy\/Strategy.php.html#29\">DesignPatterns\\Comportement\\Strategy\\Strategy::__construct<\/a>"],[100,1,"<a href=\"Strategy\/Strategy.php.html#33\">DesignPatterns\\Comportement\\Strategy\\Strategy::affiche<\/a>"],[100,1,"<a href=\"TemplateMethod\/AbstractTemplateMethod.php.html#29\">DesignPatterns\\Comportement\\TemplateMethod\\AbstractTemplateMethod::traitement<\/a>"],[100,1,"<a href=\"TemplateMethod\/AbstractTemplateMethod.php.html#35\">DesignPatterns\\Comportement\\TemplateMethod\\AbstractTemplateMethod::method1<\/a>"],[100,1,"<a href=\"TemplateMethod\/AbstractTemplateMethod.php.html#36\">DesignPatterns\\Comportement\\TemplateMethod\\AbstractTemplateMethod::method2<\/a>"],[100,1,"<a href=\"TemplateMethod\/AppTemplateMethod.php.html#17\">DesignPatterns\\Comportement\\TemplateMethod\\AppTemplateMethod::call<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod1.php.html#18\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod1::method1<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod1.php.html#23\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod1::method2<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod2.php.html#18\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod2::method1<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod2.php.html#23\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod2::method2<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod3.php.html#18\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod3::method1<\/a>"],[100,1,"<a href=\"TemplateMethod\/TemplateMethod3.php.html#23\">DesignPatterns\\Comportement\\TemplateMethod\\TemplateMethod3::method2<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
