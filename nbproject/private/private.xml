@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Observateur/EventPsr/InterfacePSR14/EventInterface.php</file>
+            <file>file:/home/wassime/projetPHP/DesignPatterns/index.php</file>
             <file>file:/home/wassime/projetPHP/DesignPatterns/Tests/Comportement/Observateur/EventPsrTest.php</file>
+            <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Observateur/EventPsr/Event.php</file>
             <file>file:/home/wassime/projetPHP/DesignPatterns/DesignPatterns/Comportement/Observateur/EventPsr/EventManager.php</file>
         </group>
     </open-files>

@@ -22,6 +22,11 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
+        'T' => 
+        array (
+            'Tuupola\\Middleware\\' => 19,
+            'Tuupola\\Http\\Factory\\' => 21,
+        ),
         'S' => 
         array (
             'Symfony\\Component\\Cache\\' => 24,
@@ -33,6 +38,19 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
+        ),
+        'N' => 
+        array (
+            'Neomerx\\Cors\\' => 13,
+        ),
+        'M' => 
+        array (
+            'Middlewares\\Utils\\' => 18,
+        ),
+        'I' => 
+        array (
+            'Interop\\Http\\Server\\' => 20,
+            'Interop\\Http\\Factory\\' => 21,
         ),
         'G' => 
         array (
@@ -61,6 +79,15 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
+        'Tuupola\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tuupola/callable-handler/src',
+            1 => __DIR__ . '/..' . '/tuupola/cors-middleware/src',
+        ),
+        'Tuupola\\Http\\Factory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tuupola/http-factory/src',
+        ),
         'Symfony\\Component\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
@@ -84,6 +111,23 @@ class ComposerStaticInit58725bff8f1ca07327a494d9848dde52
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'Neomerx\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/neomerx/cors-psr7/src',
+        ),
+        'Middlewares\\Utils\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/middlewares/utils/src',
+        ),
+        'Interop\\Http\\Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/http-interop/http-server-handler/src',
+            1 => __DIR__ . '/..' . '/http-interop/http-server-middleware/src',
+        ),
+        'Interop\\Http\\Factory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/http-interop/http-factory/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

@@ -34,7 +34,7 @@ class EventSplTest extends \PHPUnit\Framework\TestCase {
         $msgflash=new MessageFlash();
         
         $model->attach($journal);
-        $model->attach($msgflash);;
+        $model->attach($msgflash);
 
 
 

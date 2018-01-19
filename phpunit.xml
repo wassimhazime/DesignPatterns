@@ -3,10 +3,7 @@
 
 
 <phpunit bootstrap="vendor/autoload.php"
-
-         
-         
-         colors="true">
+colors="true">
     <testsuites>
         <testsuite name="money">
             <directory>./Tests</directory>
